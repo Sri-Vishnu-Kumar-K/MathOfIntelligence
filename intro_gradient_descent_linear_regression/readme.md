@@ -30,10 +30,10 @@ After performing a Linear Regression with a Gradient Descent as optimizer the fo
 
 **Y = M * X + C**
 
-<img src="imgs/BestLine.PNG">
+<img src="imgs/BestLine.png">
 
 It is noted that the error value decreases with increase in the number of iterations and this can be seen in the iterations vs error visualization provided below:
 
-<img src="imgs/ErrorValueCurve.PNG">
+<img src="imgs/ErrorValueCurve.png">
 
 #### Thanks Siraj, I absolutely love your videos.
