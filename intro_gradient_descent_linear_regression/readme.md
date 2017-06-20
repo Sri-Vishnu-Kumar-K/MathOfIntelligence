@@ -28,7 +28,7 @@ I have also added 2 different modifications to the vanilla gradient descent opti
 
 After performing a Linear Regression with a Gradient Descent as optimizer the following is the visualization of the function:
 
-**Y = M * X + C**
+**Y = M * X + B**
 
 <img src="imgs/BestLine.png">
 
