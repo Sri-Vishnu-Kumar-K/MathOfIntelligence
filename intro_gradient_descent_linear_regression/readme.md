@@ -18,7 +18,7 @@ This script is used as a helper script, to read in the csv file. Once it is read
 
 ## Script 2: gradient_descent.py
 
-###The actual action happens here.
+### The actual action happens here.
 
 I have implemented a vanilla gradient descent method in step_gradient function. You can see the script for in-depth comments for each line of code.
 
