@@ -18,7 +18,7 @@ This script is used as a helper script, to read in the csv file. Once it is read
 
 ## Script 2: gradient_descent.py
 
-###The actual action happens here.
+### The actual action happens here.
 
 I have implemented a vanilla gradient descent method in step_gradient function. You can see the script for in-depth comments for each line of code.
 
@@ -28,12 +28,12 @@ I have also added 2 different modifications to the vanilla gradient descent opti
 
 After performing a Linear Regression with a Gradient Descent as optimizer the following is the visualization of the function:
 
-**Y = M * X + C**
+**Y = M * X + B**
 
-<img src="imgs/BestLine.PNG">
+<img src="imgs/BestLine.png">
 
 It is noted that the error value decreases with increase in the number of iterations and this can be seen in the iterations vs error visualization provided below:
 
-<img src="imgs/ErrorValueCurve.PNG">
+<img src="imgs/ErrorValueCurve.png">
 
 #### Thanks Siraj, I absolutely love your videos.
