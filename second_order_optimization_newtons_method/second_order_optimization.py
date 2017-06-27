@@ -84,7 +84,7 @@ def main(): #main driver function
     m,b = gd.run()
     time_t = time.time() - time_t #end time
     print("1st order optimization ends at %s and has taken %dms"%(str(time.asctime()), time_t))
-    gd.plot_line_data(points=points, m=m, b=b) #plot the generated line
+    plot_line_data(m, b) #plot the generated line
     return
 
 if __name__=='__main__':
