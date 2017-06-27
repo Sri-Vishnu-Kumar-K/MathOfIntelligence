@@ -96,9 +96,9 @@ def run(initial_m=0, initial_b = 1):
     print("Running...")
     [m, b, error] = gradient_descent_driver(points, initial_b, initial_m, learning_rate, num_iterations, early_stop_number = 5, modify_lr = True)
     print("After {0} iterations b = {1}, m = {2}, error = {3}".format(num_iterations, b, m, compute_total_error(b, m, points)))
-    plot_line_data(points, m, b)
-    plot_error_data(error)
-    return
+    #plot_line_data(points, m, b)
+    #plot_error_data(error)
+    return m,b
 
 if __name__ == '__main__':
     run()
