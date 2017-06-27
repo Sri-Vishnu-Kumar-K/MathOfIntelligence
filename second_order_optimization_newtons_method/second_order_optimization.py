@@ -23,9 +23,7 @@ def compute_jacobian(point_pair, h = 1e-5): #computes the jacobian of the functi
     jacobian = np.zeros(n) #initialize the jacobian matrix
     for i in range(n):
         x_i = np.zeros(n)
-        for j in range(n):
-            x_i[j]+=h #add the limit value, any small value > 0 should do
-
+        x_i[i] += h #add the limit value, any small value > 0 should do
         jacobian[i] = (total_error(point_pair+x_i) - total_error(point_pair))/h #calculate derivative using first principle method f'(x) = lt(h->0) (f(x+h) - f(x))/h
     return jacobian #return the jacobian for the pair of points
 
@@ -34,9 +32,7 @@ def compute_hessian(point_pair, h = 1e-5): #computes the hessian of the function
     hessian = np.zeros((n,n)) #initialize the hessian matrix
     for i in range(n):
         x_i = np.zeros(n)
-        for j in range(n):
-            x_i[j] += h #add the limit value, any small value > 0 should do
-
+        x_i[i] += h #add the limit value, any small value > 0 should do
         hessian[i] = (compute_jacobian(point_pair+x_i) - compute_jacobian(point_pair))/h #calculate derivative using first principle method f'(x) = lt(h->0) (f(x+h) - f(x))/h
 
     return hessian #return the jacobian for the pair of points
