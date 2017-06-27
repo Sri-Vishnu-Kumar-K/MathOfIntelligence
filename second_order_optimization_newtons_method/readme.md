@@ -1,7 +1,7 @@
 # Gradient Descent
 ### Implementation of the Gradient Descent Optimizer with Early Stopping and dynamic Learning Rate for Liner Regression problem.
 
-The code above is for the challenge of [this](https://www.youtube.com/watch?v=xRJCOz3AfYY&t=9s) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
+The code above is for the challenge of [this](https://www.youtube.com/watch?v=UIFMLK2nj_w&t=1s) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
 
 ### Dependencies
 
@@ -37,12 +37,12 @@ After performing a Linear Regression with a Gradient Descent as optimizer the fo
 
 **Y = M * X + C**
 
-<img src="imgs/BestLine.png">
+<img src="imgs/BL.png">
 
 After performing a Linear Regression with The Newton Method as 2nd order optimizer the following is the visualization of the function:
 
 **Y = M * X + C**
 
-<img src="imgs/BestLine_1.png">
+<img src="imgs/BL_1.png">
 
 #### Thanks Siraj, I absolutely love your videos.
