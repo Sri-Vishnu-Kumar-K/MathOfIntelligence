@@ -37,7 +37,7 @@ After performing a Linear Regression with a Gradient Descent as optimizer the fo
 
 **Y = M * X + C**
 
-<img src="imgs/BL.png">
+<img src="imgs/BL_2.png">
 
 After performing a Linear Regression with The Newton Method as 2nd order optimizer the following is the visualization of the function:
 
