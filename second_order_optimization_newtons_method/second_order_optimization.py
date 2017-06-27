@@ -65,7 +65,7 @@ def plot_line_data(m, b): #Plots the calculated line from m and b
     plt.plot(X, m * X + b) #Plot the line.
     plt.axis([0,1.5* max(X), 0, 1.3 * max(Y)]) #Set the axes range.
     plt.title("Best line.")
-    plt.text(10, 130, "m="+str(round(m,4))+"  b="+str(round(b,4)))
+    plt.text(10, 130, "m="+str(round(m,4))+"  b="+str(round(b,4)) + " error="+str(compute_total_error(m,b)))
     plt.show() #shows the graph.
     return
 

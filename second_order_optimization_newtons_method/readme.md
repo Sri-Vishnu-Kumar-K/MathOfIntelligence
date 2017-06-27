@@ -25,7 +25,7 @@ I have also added 2 different modifications to the vanilla gradient descent opti
 
 ## Script 3: second_order_optimization.py
 
-###The actual action happens here.
+### The actual action happens here.
 
 I have implemented a 2nd order optimization method in compute_newton function, it finds the minimal error point_pair *(m,b in y = mx+ b)* for a simple linear regression problem. You can see the script for in-depth comments for each line of code.
 
