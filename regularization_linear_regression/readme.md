@@ -1,7 +1,7 @@
 # Regularisation - L1 and L2
 ### Implementation of the Gradient Descent Optimizer with L1 and L2 regularisation for Liner Regression problem.
 
-The code above is for the challenge of [this](https://www.youtube.com/watch?v=UIFMLK2nj_w&t=1s) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
+The code above is for the challenge of [this](https://www.youtube.com/watch?v=s0Q3CojqRfM) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
 
 ### Dependencies
 
