@@ -29,9 +29,9 @@ I have also added 2 different modifications to the vanilla gradient descent opti
 
 I have implemented a regularised error function in the compute_total_error function. The only variables are m and b; b is a contant and so is not included in regularisation, so error is calculated as Mean Square Error + noise. The noise is the product of *(tuning_rate/2) x absolute_value(m)* in the case of l1 regularisation, in case of l2 regularisation the noise is calculated as *(tuning_rate/2) x (m^2)*, this noise is then added to the *mean_squared_error*.
 
-In the step_gradient function, the variables m and b are adjusted using the gradient descent algorithm. Here, the error function calculated as *f(x) = (y - (mx + b)) ^ 2 + (tuning_rate/2) * absolute(m)*, for l1 regularisation and as *f(x) = (y - (mx + b)) ^ 2 + (tuning_rate/2) * m^2*, for l2 regularisation. In the case of l1 regularisation, *df(x)/dm = -2 * (y - (mx + b)) * x + tuning_rate/2 * and is calculated *df(x)/dm = -2 * (y - (mx + b)) * x + tuning_rate * m * in the case of l2 regularisation.
+In the step_gradient function, the variables m and b are adjusted using the gradient descent algorithm. Here, the error function calculated as *f(x) = (y - (mx + b)) ^ 2 + (tuning_rate/2) * absolute(m)*, for l1 regularisation and as *f(x) = (y - (mx + b)) ^ 2 + (tuning_rate/2) * m^2*, for l2 regularisation. In the case of l1 regularisation, *df(x)/dm = -2 * (y - (mx + b)) * x + tuning_rate/2* and is calculated *df(x)/dm = -2 * (y - (mx + b)) * x + tuning_rate * m* in the case of l2 regularisation.
 
-These weights are adjusted based on the new derivatives. This prevents overfitting of data.  
+These weights are adjusted based on the new derivatives. This prevents overfitting of the model on training data.  
 
 ## Result Visualization
 
@@ -39,12 +39,32 @@ After performing a Linear Regression with a Gradient Descent as optimizer the fo
 
 **Y = M * X + C**
 
-<img src="imgs/BL_2.png">
+<img src="imgs/NoReg.png">
 
-After performing a Linear Regression with The Newton Method as 2nd order optimizer the following is the visualization of the function:
+After performing a Linear Regression with l1 regularisation the following is the visualization of the function:
 
 **Y = M * X + C**
 
-<img src="imgs/BL_1.png">
+<img src="imgs/L1Reg.png">
+
+After performing a Linear Regression with l2 regularisation the following is the visualization of the function:
+
+**Y = M * X + C**
+
+<img src="imgs/L2Reg.png">
+
+It can be seen from the following charts that for l1 and l2 regularisation, the min error value is greater than the linear regression model without any regularisation. This shows that regularisation prevents overfitting of training data.
+
+**Error without regularisation**
+
+<img src="imgs/NoRegError.png">
+
+**Error with L1 regularisation**
+
+<img src="imgs/L1RegError.png">
+
+**Error with L2 regularisation**
+
+<img src="imgs/L2RegError.png">
 
 #### Thanks Siraj, I absolutely love your videos.

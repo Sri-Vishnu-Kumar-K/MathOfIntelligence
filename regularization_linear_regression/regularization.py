@@ -10,9 +10,9 @@ def compute_total_error(b, m, points, reg_type = None, tuning_rate = None): #Com
         if reg_type == None:
             totalError += (y - (m * x + b)) ** 2 #Error is calculated as y' = mx + b(Assuming linear regression) so E = (y-y')^2, summed over all points
         elif reg_type == 'l1':
-            totalError += (y - (m * x + b)) ** 2 + (tuning_rate/2) * np.abs(m)
+            totalError += (y - (m * x + b)) ** 2 + (tuning_rate/2) * np.abs(m) #Error is calculated as y' = mx + b(Assuming linear regression) so E = (y-y')^2 + tuning_rate/2 * absolute(m), summed over all points
         elif reg_type == 'l2':
-            totalError += (y - (m * x + b)) ** 2 + (tuning_rate/2) * (m ** 2)
+            totalError += (y - (m * x + b)) ** 2 + (tuning_rate/2) * (m ** 2)#Error is calculated as y' = mx + b(Assuming linear regression) so E = (y-y')^2 + tuning_rate/2 * m^2, summed over all points
     return totalError/float(len(points)) #Returning the mean squared error.
 
 def step_gradient(curr_m, curr_b, points, lr, reg_type=None, tuning_rate=None): #Gradient Descent Function.
@@ -21,15 +21,15 @@ def step_gradient(curr_m, curr_b, points, lr, reg_type=None, tuning_rate=None): 
     for i in range(len(points)):
         x = points[i,0]
         y = points[i,1]
-        t = y - (curr_m*x + curr_b) #find t = (y - (m[0]*x + m[1]*(x^2) + b))
+        t = y - (curr_m*x + curr_b) #find t = (y - (m*x + b))
         if reg_type == None:
             dt_dm += -1 * x * t #dt/dm_0 = -x*t
             dt_db += -1 * t # dt/db = -1*t
         elif reg_type == 'l1':
-            dt_dm += -1 * x * t + (tuning_rate/2) #dt/dm_0 = -x*t
+            dt_dm += -1 * x * t + (tuning_rate/2) #dt/dm_0 = -x*t + tuning_rate/2
             dt_db += -1 * t # dt/db = -1*t
         elif reg_type == 'l2':
-            dt_dm += -1 * x * t + tuning_rate*curr_m#dt/dm_0 = -x*t
+            dt_dm += -1 * x * t + tuning_rate*curr_m #dt/dm_0 = -x*t + tuning_rate*m
             dt_db += -1 * t # dt/db = -1*t
 
     dt_dm = (2*dt_dm)/float(len(points))
@@ -115,7 +115,7 @@ def main(): #main driver function
         print("After {0} iterations b = {1}, m = {2}, error = {3}".format(num_iterations, b, m, compute_total_error(b, m, points, reg_type=type_i, tuning_rate=tuning_rate)))
         plot_line_data(points, m, b)
         plot_error_data(error)
-        print("RMS error on test after calculating {0} based linear regression using b = {1}, m = {2}, error = {3}".format(type_i, b, m, compute_total_error(b, m, test, reg_type=None, tuning_rate=None)))
+        print("Mean Squared error on test after calculating {0} based linear regression using b = {1}, m = {2}, error = {3}".format(type_i, b, m, compute_total_error(b, m, test, reg_type=None, tuning_rate=None)))
     return
 
 if __name__=='__main__':
